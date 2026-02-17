@@ -1,11 +1,11 @@
-import { ActionIcon, AppShell, Burger, Group, NavLink, Title } from '@mantine/core';
+import { ActionIcon, AppShell, Burger, Group, NavLink, Title, Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSettings, IconBook, IconX } from '@tabler/icons-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 export function ApplicationShell({ children }: { children: React.ReactNode }) {
-    const [opened, { toggle }] = useDisclosure(false);
+    const [opened, { toggle, close }] = useDisclosure(false);
     const navigate = useNavigate();
     const location = useLocation();
     const { t } = useTranslation();
@@ -24,7 +24,7 @@ export function ApplicationShell({ children }: { children: React.ReactNode }) {
             leftSection={<link.icon size="1rem" stroke={1.5} />}
             onClick={() => {
                 navigate(link.to);
-                if (opened) toggle();
+                close();
             }}
         />
     ));
@@ -32,13 +32,12 @@ export function ApplicationShell({ children }: { children: React.ReactNode }) {
     return (
         <AppShell
             header={{ height: 60 }}
-            navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
             padding="md"
         >
             <AppShell.Header>
                 <Group h="100%" px="md" justify="space-between">
                     <Group>
-                        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+                        <Burger opened={opened} onClick={toggle} />
                         <Title order={3}>Vocabulary Revision</Title>
                     </Group>
                     <ActionIcon variant="subtle" color="gray" onClick={() => window.close()}>
@@ -47,12 +46,12 @@ export function ApplicationShell({ children }: { children: React.ReactNode }) {
                     </ActionIcon>
                 </Group>
             </AppShell.Header>
-            <AppShell.Navbar p="md">
-                {mainLinks}
-            </AppShell.Navbar>
             <AppShell.Main>
                 {children}
             </AppShell.Main>
+            <Drawer opened={opened} onClose={close} title="Menu">
+                {mainLinks}
+            </Drawer>
         </AppShell>
     );
 }
