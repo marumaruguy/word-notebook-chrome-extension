@@ -50,7 +50,14 @@
             "table": {
                 "word": "Word",
                 "url": "Link",
-                "created_at": "Created At"
+                "lookup": "Lookup",
+                "remove": "Remove"
+            },
+            "delete": {
+                "title": "Delete word",
+                "confirm_message": "Delete this word from your list?",
+                "cancel": "Cancel",
+                "confirm": "Delete"
             }
         },
         "common": {
