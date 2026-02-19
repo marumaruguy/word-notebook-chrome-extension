@@ -2,6 +2,9 @@
 
 ## Latest (Not yet packed)
 
+## 1.0.2
+
+- fixed - the context menu action "Record and Lookup Word" stopped responding after 10 minutes of inactivity.
 - fixed - popup needs multiple clicks to show up
 
 ## 1.0.1
