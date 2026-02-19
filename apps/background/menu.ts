@@ -41,7 +41,7 @@ export const addMenuEventListeners = (i18n: i18nType) => {
             if (config.newTab) {
                 chrome.tabs.create(
                     {
-                        url: `${llmLink[config.llm]}${encodeURIComponent(text || '')}`
+                        url: `${llmLink[config.llm]}${encodeURIComponent(i18n.t('app.common.prompt_lookup', { word: text })) || ''} `
                     },
                     () => { }
                 );

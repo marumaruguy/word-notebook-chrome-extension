@@ -47,7 +47,8 @@
         "common": {
             "menu": "選單",
             "context_menu_record": "記錄 \"%s\"",
-            "context_menu_lookup": "記錄並查詢 \"%s\""
+            "context_menu_lookup": "記錄並查詢 \"%s\"",
+            "prompt_lookup": "「{{word}}」的中文意思是什麼？請用這個字作一篇短例文"
         },
         "to": "網址"
     }

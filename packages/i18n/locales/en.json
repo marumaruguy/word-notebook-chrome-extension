@@ -47,7 +47,8 @@
         "common": {
             "menu": "Menu",
             "context_menu_record": "Record \"%s\"",
-            "context_menu_lookup": "Record and lookup \"%s\""
+            "context_menu_lookup": "Record and lookup \"%s\"",
+            "prompt_lookup": "What is the meaning of {{word}} in english? Use it to write a short story also."
         },
         "to": "url"
     }
