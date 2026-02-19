@@ -18,6 +18,15 @@
                     "zh-HK": "繁體中文(香港)"
                 }
             },
+            "llm": {
+                "label": "查詢使用",
+                "placeholder": "請選擇",
+                "name": {
+                    "perplexity": "Perplexity",
+                    "googleAI": "Google（AI 摘要）",
+                    "google": "Google"
+                }
+            },
             "new_tab": {
                 "label": "右鍵點擊高亮的單字後，在新分頁開啟",
                 "placeholder": "請選擇",

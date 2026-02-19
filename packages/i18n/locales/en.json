@@ -18,6 +18,15 @@
                     "zh-HK": "Chinese (Traditional)"
                 }
             },
+            "llm": {
+                "label": "Lookup with",
+                "placeholder": "Pick one",
+                "name": {
+                    "perplexity": "Perplexity",
+                    "googleAI": "Google (AI overview)",
+                    "google": "Google"
+                }
+            },
             "new_tab": {
                 "label": "Open in New Tab after right click the highlighted text",
                 "placeholder": "Pick one",
