@@ -2,7 +2,6 @@ import { getConfig, getLookupPrompt, llmLink } from '@repo/config';
 import { addWord } from '@repo/database';
 import { v4 as uuidv4 } from 'uuid';
 import { i18n } from '@repo/i18n';
-import { resolve } from 'path';
 
 type i18nType = typeof i18n;
 
@@ -27,14 +26,18 @@ export const addMenuEventListeners = (i18n: i18nType) => {
             const text = info.selectionText;
             const url = await new Promise<string>(resolve => chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => resolve(tabs[0] ? (tabs[0].url || '') : '')));
 
-            if (text) {
+            const word = (text && text.trim() === '') ? text.substring(0, 20) : "";
+
+            if (word) {
                 await addWord({
                     id: uuidv4(),
-                    word: text,
+                    word,
                     url: url,
                     createdAt: new Date(),
                     updatedAt: new Date()
                 });
+            } else {
+                return;
             }
 
             const config = await getConfig();
@@ -43,7 +46,7 @@ export const addMenuEventListeners = (i18n: i18nType) => {
             if (config.newTab) {
                 chrome.tabs.create(
                     {
-                        url: `${llmLink[config.llm]}${encodeURIComponent(getLookupPrompt(i18n, text || '', true, config.treatAs)) || ''} `
+                        url: `${llmLink[config.llm]}${encodeURIComponent(getLookupPrompt(i18n, word || '', true, config.treatAs)) || ''} `
                     },
                     () => { }
                 );
