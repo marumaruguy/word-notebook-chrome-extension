@@ -28,10 +28,10 @@
                 }
             },
             "new_tab": {
-                "label": "Open in New Tab after right click the highlighted text",
+                "label": "Action after right click the highlighted text",
                 "placeholder": "Pick one",
-                "yes": "Yes",
-                "no": "No"
+                "record": "Record",
+                "record_and_lookup": "Record and Lookup"
             },
             "treat_as": {
                 "label": "Treat the words as",
