@@ -75,7 +75,7 @@
                 "button": "単語",
                 "title": "単語を追加",
                 "word_label": "単語",
-                "url_label": "URL",
+                "url_label": "URL (任意)",
                 "confirm": "追加",
                 "cancel": "キャンセル",
                 "word_required": "単語を入力してください",

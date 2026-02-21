@@ -75,7 +75,7 @@
                 "button": "單字",
                 "title": "新增單字",
                 "word_label": "單字",
-                "url_label": "網址",
+                "url_label": "網址 (非必需)",
                 "confirm": "新增",
                 "cancel": "取消",
                 "word_required": "請輸入單字",

@@ -75,7 +75,7 @@
                 "button": "Word",
                 "title": "Add Word",
                 "word_label": "Word",
-                "url_label": "URL",
+                "url_label": "URL (Optional)",
                 "confirm": "Add",
                 "cancel": "Cancel",
                 "word_required": "Word is required",
