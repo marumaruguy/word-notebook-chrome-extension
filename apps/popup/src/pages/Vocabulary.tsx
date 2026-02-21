@@ -1,5 +1,5 @@
 import { Table, ScrollArea, Pagination, Button, ActionIcon, Modal, Group, Text, Title, TextInput, Stack, List } from '@mantine/core';
-import { IconTrash, IconSearch, IconPlus } from '@tabler/icons-react';
+import { IconTrash, IconSearch, IconPlus, IconLink } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 
 import { getVocabulary, deleteWord, addWord, Vocabulary as VocabularyType } from '@repo/database';
@@ -131,9 +131,16 @@ export function Vocabulary() {
             <Table.Td>{vocab.word}</Table.Td>
             <Table.Td>
                 {vocab.url ? (
-                    <a href={vocab.url} target="_blank" rel="noreferrer">
-                        {t('app.to')}
-                    </a>
+                    <ActionIcon
+                        component="a"
+                        href={vocab.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="subtle"
+                        aria-label={t('app.to')}
+                    >
+                        <IconLink size={16} />
+                    </ActionIcon>
                 ) : null}
             </Table.Td>
             <Table.Td>
