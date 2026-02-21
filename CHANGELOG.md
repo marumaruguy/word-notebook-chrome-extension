@@ -7,6 +7,7 @@
 - chore - modify the build script, rename and add "skiptest"
 - chore - change the hints when no data.
 - fix - reduce the size of the chrome extension package
+- feat - add support to ja and zh-tw
 
 ## 1.1.1
 
