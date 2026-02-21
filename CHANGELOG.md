@@ -3,6 +3,10 @@
 ## Latest (Not yet packed)
 
 - feat - add "add word" button
+- chore - change the "add word" button text, setting text
+- chore - modify the build script, rename and add "skiptest"
+- chore - change the hints when no data.
+- fix - reduce the size of the chrome extension package
 
 ## 1.1.1
 
