@@ -36,7 +36,7 @@ Stored in `chrome.storage.local` via `@repo/config`:
 | Field       | Type    | Default       | Description                        |
 |-------------|---------|---------------|------------------------------------|
 | `llm`       | string  | `perplexity`  | LLM provider for word lookup       |
-| `language`  | string  | `en`          | UI language (`en` or `zh-HK`)      |
+| `language`  | string  | `en`          | UI language (`en`, `zh-HK`, `zh-TW`, or `ja`)      |
 | `newTab`    | boolean | `true`        | Open result in new tab             |
 | `firstTime` | boolean | `true`        | Whether to show the Welcome page   |
 

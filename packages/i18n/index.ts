@@ -2,6 +2,8 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import en from "./locales/en.json";
 import zhHK from "./locales/zh-hk.json";
+import zhTW from "./locales/zh-tw.json";
+import ja from "./locales/ja.json";
 
 export { i18n };
 
@@ -12,6 +14,12 @@ export const resources = {
     },
     "zh-HK": {
         translation: zhHK,
+    },
+    "zh-TW": {
+        translation: zhTW,
+    },
+    ja: {
+        translation: ja,
     },
 } as const;
 
