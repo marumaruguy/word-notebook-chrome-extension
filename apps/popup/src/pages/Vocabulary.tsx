@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { getConfig, llmLink, getLookupPrompt } from '@repo/config';
 
 const CSV_COLUMNS = ['id', 'word', 'url', 'createdAt', 'updatedAt'] as const;
+const FUNCTION_COLUMN_WIDTH = '65px'
 
 function escapeCsvCell(value: string): string {
     if (/[",\n\r]/.test(value)) {
@@ -307,10 +308,10 @@ export function Vocabulary() {
                     <Table.Thead>
                         <Table.Tr>
                             <Table.Th>{t('app.vocabulary.table.word')}</Table.Th>
-                            <Table.Th>{t('app.vocabulary.table.url')}</Table.Th>
-                            <Table.Th>{t('app.vocabulary.table.lookup')}</Table.Th>
-                            <Table.Th>{t('app.vocabulary.table.edit')}</Table.Th>
-                            <Table.Th>{t('app.vocabulary.table.remove')}</Table.Th>
+                            <Table.Th w={FUNCTION_COLUMN_WIDTH}>{t('app.vocabulary.table.url')}</Table.Th>
+                            <Table.Th w={FUNCTION_COLUMN_WIDTH}>{t('app.vocabulary.table.lookup')}</Table.Th>
+                            <Table.Th w={FUNCTION_COLUMN_WIDTH}>{t('app.vocabulary.table.edit')}</Table.Th>
+                            <Table.Th w={FUNCTION_COLUMN_WIDTH}>{t('app.vocabulary.table.remove')}</Table.Th>
                         </Table.Tr>
                     </Table.Thead>
                     {
