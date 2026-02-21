@@ -69,7 +69,8 @@
                 "confirm": "刪除"
             },
             "add": {
-                "title": "單字",
+                "button": "單字",
+                "title": "新增單字",
                 "word_label": "單字",
                 "url_label": "網址",
                 "confirm": "新增",

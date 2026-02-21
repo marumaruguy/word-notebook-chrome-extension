@@ -69,7 +69,8 @@
                 "confirm": "Delete"
             },
             "add": {
-                "title": "Word",
+                "button": "Word",
+                "title": "Add Word",
                 "word_label": "Word",
                 "url_label": "URL",
                 "confirm": "Add",
